@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * swap - function to swap two numbers
+ * swapInt - function to swap two numbers
  * @a: address of first number
  * @b: address of second number
  * Return: Void
@@ -22,11 +22,11 @@ void swapInt(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-        int  swapped = 1;
-        size_t pass, i;
+	int  swapped = 1;
+	size_t pass, i;
 
 	if (size < 2)
-	        return;
+		return;
 
 	for (pass = size; pass > 0 && swapped; pass--)
 	{
