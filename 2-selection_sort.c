@@ -1,6 +1,22 @@
 #include "sort.h"
 
 /**
+ * swapInt - swaps two given integers
+ * @a: first nuber
+ * @b: second number
+ * Return: Always void
+*/
+
+void swapInt(int *a, int *b)
+{
+        int temp;
+
+        temp = *a;
+        *a = *b;
+        *b = temp;
+}
+
+/**
  * selection_sort - sorts an array using selection sort
  * @array: array tobe sorted
  * @size: Size of the array
