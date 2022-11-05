@@ -5,7 +5,7 @@
  * @b: address of second number
  * Return: Void
  */
-void swap(int *a, int *b)
+void swapInt(int *a, int *b)
 {
 	int temp;
 
@@ -22,10 +22,11 @@ void swap(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	if (size < 2)
-	return;
+        int  swapped = 1;
+        size_t pass, i;
 
-	int pass, i, j, swapped = 1;
+	if (size < 2)
+	        return;
 
 	for (pass = size; pass > 0 && swapped; pass--)
 	{
@@ -34,11 +35,10 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i] > array[i + 1])
 			{
-				swap(&array[i], &array[i + 1]);
+				swapInt(&array[i], &array[i + 1]);
 				swapped = 1;
 				print_array(array, size);
 			}
 		}
 	}
 }
-
