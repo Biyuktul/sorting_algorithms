@@ -28,5 +28,4 @@ listint_t *swap(listint_t *node, listint_t **head);
 void quick_sort(int *array, size_t size);
 void quickSortRecursion(int *array, int low, int high, int size);
 int lomuto_partition(int *array, int low, int high, int size);
-
 #endif /*SORT_H*/
