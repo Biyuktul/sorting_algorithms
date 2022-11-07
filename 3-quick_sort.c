@@ -26,6 +26,8 @@ void swapI(int *array, size_t idx1, size_t idx2)
 
 void quick_sort(int *array, size_t size)
 {
+	if (!array || size < 2)
+		return;
 	quickSortRecursion(array, 0, size - 1, size);
 }
 
