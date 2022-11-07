@@ -34,10 +34,11 @@ listint_t *swap(listint_t *node, listint_t **head)
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *curr = (*list)->next;
+	listint_t *curr;
 
 	if (list == NULL || (*list)->next == NULL)
 		return;
+	curr = (*list)->next;
 
 	while (curr)
 	{
