@@ -13,7 +13,7 @@ void bubble_sort(int *array, size_t size)
 	size_t i, j, swp;
 
 	/* For more efficiency i loops from 0 to size - 1*/
-	for (i = 0; i < size - 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		/* swp: If the array is sorted, the func stop */
 		swp = 0;
