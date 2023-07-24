@@ -32,7 +32,6 @@ void shell_sort(int *array, size_t size)
 		}
 
 		print_array(array, size);
-
-		increment = (increment - 1) / 3;
+		increment = (increment == 1) ? 0 : (increment - 1) / 3;
 	}
 }
