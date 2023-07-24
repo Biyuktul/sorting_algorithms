@@ -33,12 +33,8 @@ void counting_sort(int *array, size_t size)
 		count_array[j] = 0;
 	for (i = 0; i < size; i++)
 		count_array[(array[i])] += 1;
-	for (j = 0; j < k + 1; j++)
-	{
-		if (j == 0)
-			continue;
+	for (j = 1; j < k + 1; j++)
 		count_array[j] += count_array[j - 1];
-	}
 	print_array(count_array, k + 1);
 	for (i = 0; i < size; i++)
 	{
