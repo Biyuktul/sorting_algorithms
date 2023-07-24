@@ -5,17 +5,16 @@ In computer science, a sorting algorithm is an algorithm that puts elements of a
 # List of Sorting Algorithms
 
 - Bubble Sort
-- Selection Sort
 - Insertion Sort
-- Merge Sort
+- Selection Sort
 - Quick Sort - Hoare Partition scheme
-- Heap Sort
+- Shell Sort
+- Cocktail Shaker Sort
 - Counting Sort
+- Merge Sort
+- Heap Sort
 - Radix Sort
 - Bitonic Sort
-- Cocktail Shaker Sort
-- Shell Sort
-  This project is meant to be done by groups of two students.
 
 ## Compilation
 
