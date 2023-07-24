@@ -2,39 +2,37 @@
 #include <stdio.h>
 
 /**
- * swap - Swaps two integers.
- * @a: Pointer to the first integer.
- * @b: Pointer to the second integer.
- *
- * This function swaps the values of two integers pointed to by @a and @b.
- */
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-/**
  * shell_sort - Sorts an array of integers using the Shell Sort algorithm.
- * @a: Pointer to the first element of the array.
- * @n: Number of elements in the array.
+ * @array: Pointer to the first element of the array.
+ * @size: Number of elements in the array.
  * Returns: void
  */
+
 void shell_sort(int *array, size_t size)
 {
-	int h, i, j, t;
-	for (h = size; h >= 1; h /= 2)
+	int tmp;
+	size_t j, i, increment;
+
+	increment = 1;
+	while (increment <= size / 3)
 	{
-		for (i = h; i < size; i++)
+		increment = increment * 3 + 1;
+	}
+
+	while (increment > 0)
+	{
+		for (i = increment; i < size; i++)
 		{
-			t = array[i];
-			for (j = i; j >= h && t < array[j - h]; j -= h)
+			tmp = array[i];
+			for (j = i; j >= increment && tmp < array[j - increment]; j -= increment)
 			{
-				swap(&array[j], &array[j - h]);
-				print_array(array, size);
+				array[j] = array[j - increment];
 			}
-			array[j] = t;
+			array[j] = tmp;
 		}
+
+		print_array(array, size);
+
+		increment = (increment - 1) / 3;
 	}
 }
