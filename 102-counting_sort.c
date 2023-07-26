@@ -36,10 +36,15 @@ void counting_sort(int *array, size_t size)
 	for (j = 1; j < k + 1; j++)
 		count_array[j] += count_array[j - 1];
 	print_array(count_array, k + 1);
+	for (j = k; j > 0; j--)
+	{
+		count_array[j] = count_array[j - 1];
+	}
+	count_array[0] = 0;
 	for (i = 0; i < size; i++)
 	{
-		count_array[temp_array[i]] -= 1;
 		array[count_array[temp_array[i]]] = temp_array[i];
+		count_array[temp_array[i]] += 1;
 	}
 	free(count_array);
 	free(temp_array);
