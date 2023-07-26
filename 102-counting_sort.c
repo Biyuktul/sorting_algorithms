@@ -11,9 +11,11 @@ void counting_sort(int *array, size_t size)
 	size_t i;
 	int k, j;
 	int *count_array;
+	int *temp_array;
+
 	if (!array || size == 1)
 		return;
-	int *temp_array = malloc(sizeof(int) * size);
+	temp_array = malloc(sizeof(int) * size);
 
 	if (temp_array == NULL)
 		return;
