@@ -10,12 +10,12 @@ void counting_sort(int *array, size_t size)
 {
 	size_t i;
 	int k, j;
-	int *count_array;
-	int *temp_array = malloc(sizeof(int) * size);
+	int *count_array, *temp_array;
 
-	if (temp_array == NULL)
-		return;
 	if (!array || size == 1)
+		return;
+	temp_array = malloc(sizeof(int) * size);
+	if (temp_array == NULL)
 		return;
 	for (i = 0; i < size; i++)
 	{
