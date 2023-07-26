@@ -4,13 +4,16 @@
 int counting_radix(int *array, size_t size, int d);
 
 /**
-  * radix_sort - radix sort algo
-  * @array: array
-  * @size: size of array
-  */
+ * radix_sort - radix sort algo
+ * @array: array
+ * @size: size of array
+ */
 void radix_sort(int *array, size_t size)
 {
 	int d = 1;
+
+	if (!array || size == 1)
+		return;
 
 	while (counting_radix(array, size, d) != -1)
 	{
@@ -20,12 +23,12 @@ void radix_sort(int *array, size_t size)
 }
 
 /**
-  * counting_radix - counting sort algo
-  * @array: array
-  * @size: size of array
-  * @d: modulos
-  * Return: return 0 or -1
-  */
+ * counting_radix - counting sort algo
+ * @array: array
+ * @size: size of array
+ * @d: modulos
+ * Return: return 0 or -1
+ */
 int counting_radix(int *array, size_t size, int d)
 {
 	size_t i;
