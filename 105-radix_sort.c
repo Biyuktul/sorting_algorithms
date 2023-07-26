@@ -28,7 +28,7 @@ void radix_sort(int *array, size_t size)
 int counting_radix(int *array, size_t size, int d)
 {
 	size_t i;
-	int k = 9, j;
+	int k = 9, j, c;
 	int *count_array;
 	int *temp_array = malloc(sizeof(int) * size);
 
@@ -58,10 +58,16 @@ int counting_radix(int *array, size_t size, int d)
 	}
 	for (j = 1; j < k + 1; j++)
 		count_array[j] += count_array[j - 1];
+	for (j = 1; j < k + 1; j++)
+	{
+		count_array[j] = count_array[j - 1];
+	}
+	count_array[0] = 0;
 	for (i = 0; i < size; i++)
 	{
-		count_array[(temp_array[i] / d) % 10] -= 1;
-		array[count_array[(temp_array[i] / d) % 10]] = temp_array[i];
+		c = (temp_array[i] / d) % 10;
+		array[count_array[c]] = temp_array[i];
+		count_array[c] += 1;
 	}
 	free(count_array);
 	free(temp_array);
