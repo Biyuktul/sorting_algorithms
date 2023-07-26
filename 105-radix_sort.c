@@ -1,6 +1,6 @@
 #include "sort.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 int counting_radix(int *array, size_t size, int d);
 
 /**
@@ -24,6 +24,7 @@ void radix_sort(int *array, size_t size)
   * @array: array
   * @size: size of array
   * @d: modulos
+  * Return: return 0 or -1
   */
 int counting_radix(int *array, size_t size, int d)
 {
@@ -58,7 +59,7 @@ int counting_radix(int *array, size_t size, int d)
 	}
 	for (j = 1; j < k + 1; j++)
 		count_array[j] += count_array[j - 1];
-	for (j = 1; j < k + 1; j++)
+	for (j = k; j > 0; j--)
 	{
 		count_array[j] = count_array[j - 1];
 	}
