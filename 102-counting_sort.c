@@ -2,15 +2,17 @@
 #include <stdlib.h>
 
 /**
-  * counting_sort - counting sort algo
-  * @array: array
-  * @size: size of array
-  */
+ * counting_sort - counting sort algo
+ * @array: array
+ * @size: size of array
+ */
 void counting_sort(int *array, size_t size)
 {
 	size_t i;
 	int k, j;
 	int *count_array;
+	if (!array || size == 1)
+		return;
 	int *temp_array = malloc(sizeof(int) * size);
 
 	if (temp_array == NULL)
