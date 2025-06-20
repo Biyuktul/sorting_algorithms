@@ -2,7 +2,7 @@
 
 ![C Language](https://img.shields.io/badge/Language-C-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Documentation Status](https://readthedocs.org/projects/sorting-algorithms/badge/?version=latest)](https://sorting-algorithms.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/sorting-algorithms-c/badge/?version=latest)](https://sorting-algorithms-c.readthedocs.io/en/latest/?badge=latest)
 
 
 A comprehensive collection of sorting algorithms implemented in C. This repository provides efficient implementations of classic and advanced sorting techniques with detailed explanations and complexity analysis.
